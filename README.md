@@ -4,6 +4,8 @@ This is a CRM backend system where company employees/counsellors can manage stud
 
 **Postman Testing Link** -> [Click Here 👉](https://sahilahmed0029-3594081.postman.co/workspace/507292b8-beec-4de7-81da-d9594af9042c/collection/47691689-ec5fc3e0-af8e-4911-8785-5f154cab1300?action=share&source=copy-link&creator=47691689)
 
+---
+
 ### ✅ Features
 - Employee registration & login (JWT auth)
 - Public lead creation form (no login required)
@@ -72,6 +74,7 @@ NODE_ENV=development
 
 ```
 
+---
 
 ## 🧠 Installation & Setup
 
