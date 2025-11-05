@@ -2,6 +2,8 @@
 
 This is a CRM backend system where company employees/counsellors can manage student enquiries (leads).  
 
+**Postman Testing Link** -> [Click Here 👉](https://sahilahmed0029-3594081.postman.co/workspace/507292b8-beec-4de7-81da-d9594af9042c/collection/47691689-ec5fc3e0-af8e-4911-8785-5f154cab1300?action=share&source=copy-link&creator=47691689)
+
 ### ✅ Features
 - Employee registration & login (JWT auth)
 - Public lead creation form (no login required)
@@ -9,6 +11,17 @@ This is a CRM backend system where company employees/counsellors can manage stud
 - Claim a lead (assign to logged-in user)
 - View leads claimed by logged-in user
 - MongoDB + Express + JWT secure API
+
+---
+
+## 🔧 Tech Stack
+
+| Layer | Technology |
+|------|-----------|
+Backend | Node.js + Express.js  
+Database | MongoDB (Mongoose)  
+Security | JWT + BCrypt  
+Validation | Joi  
 
 ---
 
@@ -64,8 +77,8 @@ NODE_ENV=development
 
 ```bash
 # 1️⃣ Clone the repo
-git clone https://github.com/yourusername/crm-backend.git
-cd crm-backend
+git clone https://https://github.com/Sahil0p/CRM-Fastor
+cd CRM-Fastor
 
 # 2️⃣ Install dependencies
 npm install
@@ -124,55 +137,67 @@ After login, you'll receive a token like:
 | GET    | `/`       | Welcome / API info route |
 | GET    | `/health` | Health check             |
 
-### 🚀 Testing Sequence Flow
-| Step | Action                      | Endpoint                     |
-| ---- | --------------------------- | ---------------------------- |
-| 1️⃣  | Register                    | `POST /api/auth/register`    |
-| 2️⃣  | Login & copy token          | `POST /api/auth/login`       |
-| 3️⃣  | Submit a lead (public user) | `POST /api/leads`            |
-| 4️⃣  | View unclaimed leads        | `GET /api/leads/unclaimed`   |
-| 5️⃣  | Claim a lead                | `PATCH /api/leads/:id/claim` |
-| 6️⃣  | Get your claimed leads      | `GET /api/leads/my`          |
+---
 
- ---
 
- ## 🧪 Postman Testing
-### Register Employee
+ ## 🧪 Postman Testing 
+### 1️⃣ Register Employee
 ```
 POST http://localhost:4000/api/auth/register
 Body:
 {
-  "name":"Test User",
-  "email":"test@crm.com",
+  "name":"Sahil Ahmed",
+  "email":"sahil@crm.com",
   "password":"pass1234"
 }
 ```
 
-### Login
+### 2️⃣ Login
 ```
 POST http://localhost:4000/api/auth/login
 ```
 > Copy the token from response
 
-### Submit Lead (no auth)
+### 3️⃣ Submit Lead (no auth)
 ```
 POST http://localhost:4000/api/leads
 ```
-### Set Auth Header for next APIs
+### 4️⃣ Set Auth Header for next APIs
 ```
 Authorization: Bearer <your_token>
 ```
-### Get Unclaimed Leads
+### 5️⃣ Get Unclaimed Leads
 ```
 GET http://localhost:4000/api/leads/unclaimed
 ```
-### Claim Lead
+### 6️⃣ Claim Lead
 ```
 PATCH http://localhost:4000/api/leads/<leadId>/claim
 ```
-### Get My Leads
+### 7️⃣ Get My Leads
 ```
 GET http://localhost:4000/api/leads/my
 ```
 
+---
 
+## ✅ Acceptance Criteria
+| Requirement                     | Status |
+| ------------------------------- | ------ |
+| Employee Login/Register         | ✅      |
+| Public form (no login)          | ✅      |
+| Claim leads                     | ✅      |
+| Fetch unclaimed leads           | ✅      |
+| Fetch claimed leads (logged-in) | ✅      |
+
+
+ ---
+
+
+## 🧑‍💻 Developer
+
+**Author:** Sahil Ahmed  
+📧 Email: sahilahmed0029@gmail.com  
+💼 GitHub: [@Sahil0p](https://github.com/Sahil0p)
+
+---
